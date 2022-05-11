@@ -16,6 +16,11 @@ public class JogoBuilder {
         {
             throw new IllegalArgumentException("Nome invalido");
         }
+        //Criado para mostrar o entendimento da funcionalidade.
+        if(jogo.getPlataforma() != null && (!jogo.getPlataforma().equals("Ps4") || !jogo.getPlataforma().equals("Pc")))
+        {
+            throw new IllegalArgumentException("Atualmente so é possivel criar jogos para Ps4 e Pc");
+        }
         return jogo;
     }
 
